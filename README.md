@@ -67,7 +67,7 @@ BLUETOOTH_ID_PRESENT=1
 6.	Exclude from Build the unused files for the radio board support, by selecting the radio folder or only the `.c file`. The location of such folders is `vendor/LoRaMac-node-4.4.7/src/radio` and at this level there are the transceiver folders `SX126x`, `SX1272` and `SX1276`.
 	Example: if using the **SX1262**, exclude from Build, the SX1272 and SX1276 support files / folders.
 	
-7.	Configure the mbed shield pins properly into the file `board-config.h` for each case. The pins can be modified by either commenting / uncommenting the define lines for the BRDxxxx pins into the EXT connector that lead to the LoRa transceiver signals in the mbed shield or by typing the proper pins in the case such defines aren´t already available.
+7.	Configure the mbed shield pins properly into the file `board-config.h` located into the folder `port_loramac_node_board` for your specific case. The pins can be modified by either commenting / uncommenting the define lines for the BRDxxxx pins into the EXT connector that lead to the LoRa transceiver signals in the mbed shield or by typing the proper pins in the case such defines aren´t already available.
 
 8.	Modify the application file `app.c` (or maybe some other related file, such as `blink.c` when using Blink Baremetal as base project) to properly do the application processing of the LoRaWAN protocol coordinated with the original application tasks.
 	-	There are example of such application files into the [Example_Projects](https://github.com/VermontRep/LoRaMac-node_Silabs/tree/master/Example_Projects) folder to help identify possible processing alternatives.
