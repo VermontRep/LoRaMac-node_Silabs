@@ -6,10 +6,10 @@
 Project File ready to use: `LoRaMac-node_PG22_blink_baremetal_Si70xx.sls`
 
 Summary:
-	-	Silabs MCU Board: **PG22-DK2503A**
-	-	Semtech mbed shield: **SX1262MB2xAS**
-	-	Base Project: **Platform - Blink Baremetal**
-	-	Added Functions: *LoRaWAN + Si70xx (RH&T sensor) + print functions*
+-	Silabs MCU Board: **PG22-DK2503A**
+-	Semtech mbed shield: **SX1262MB2xAS**
+-	Base Project: **Platform - Blink Baremetal**
+-	Added Functions: *LoRaWAN + Si70xx (RH&T sensor) + print functions*
 
 ## Files to Replace in the Basic Project when creating it
 
