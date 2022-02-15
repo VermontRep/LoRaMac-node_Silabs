@@ -60,7 +60,9 @@ REGION_AU915=1
 SOFT_SE=1
 SX1262MBXCAS=1
 ```
+
 	-	**This one shall only be added if the Bluetooth ID is present in the MCU (such as in BG22 or MG22 series)**
+	
 ```
 BLUETOOTH_ID_PRESENT=1
 ```
