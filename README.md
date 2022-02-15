@@ -59,13 +59,10 @@ vendor
 REGION_AU915=1
 SOFT_SE=1
 SX1262MBXCAS=1
-```
-
-	-	**This one shall only be added if the Bluetooth ID is present in the MCU (such as in BG22 or MG22 series)**
-	
-```
 BLUETOOTH_ID_PRESENT=1
 ```
+
+	-	**This last one BLUETOOTH_ID_PRESENT=1 one shall only be added if the Bluetooth ID is present in the MCU (such as in BG22 or MG22 series)**
 
 6.	Exclude from Build the unused files for the radio board support, by selecting the radio folder or only the `.c file`.
 	Example: if using the **SX1262**, exclude from Build, the SX1272 and SX1276 support files / folders.
@@ -79,7 +76,7 @@ BLUETOOTH_ID_PRESENT=1
 
 ## Ready Example Projects
 
-There are also ready to use example projects in the `.sls` format inside the folder [Example_Projects](https://github.com/VermontRep/LoRaMac-node_Silabs/tree/master/Examples_Projects) to use through the Simplicity Studio v5 **Import** function.
+There are also ready to use example projects in the `.sls` format inside the folder [Example_Projects](https://github.com/VermontRep/LoRaMac-node_Silabs/tree/master/Example_Projects) to use through the Simplicity Studio v5 **Import** function.
 
 ## Code Inheritance
 
