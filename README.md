@@ -64,7 +64,7 @@ BLUETOOTH_ID_PRESENT=1
 
 -	**This last one BLUETOOTH_ID_PRESENT=1 shall only be added if the Bluetooth ID is present in the MCU (such as in BG22 or MG22 series)**
 
-6.	Exclude from Build the unused files for the radio board support, by selecting the radio folder or only the `.c file`.
+6.	Exclude from Build the unused files for the radio board support, by selecting the radio folder or only the `.c file`. The location of such folders is `vendor/LoRaMac-node-4.4.7/src/radio` and at this level there are the transceiver folders `SX126x`, `SX1272` and `SX1276`.
 	Example: if using the **SX1262**, exclude from Build, the SX1272 and SX1276 support files / folders.
 	
 7.	Configure the mbed shield pins properly into the file `board-config.h` for each case. The pins can be modified by either commenting / uncommenting the define lines for the BRDxxxx pins into the EXT connector that lead to the LoRa transceiver signals in the mbed shield or by typing the proper pins in the case such defines aren´t already available.
