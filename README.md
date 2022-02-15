@@ -34,35 +34,35 @@ The steps required are:
 
 3.	Copy the following files and folders from the `To_Copy` folder:
 ```
-	comm_lorawan
-	port_loramac_node_board
-	vendor
+comm_lorawan
+port_loramac_node_board
+vendor
 ```
 4.	Add the following list of include directories for both C Compiler and Assembly:
 ```
-	"${workspace_loc:/${ProjName}/vendor/LoRaMac-node-4.4.7/src/boards}"
-	"${workspace_loc:/${ProjName}/vendor/LoRaMac-node-4.4.7/src/system}"
-	"${workspace_loc:/${ProjName}/vendor/LoRaMac-node-4.4.7/src/mac/region}"
-	"${workspace_loc:/${ProjName}/vendor/LoRaMac-node-4.4.7/src/radio}"
-	"${workspace_loc:/${ProjName}/vendor/LoRaMac-node-4.4.7/src/peripherals/soft-se}"
-	"${workspace_loc:/${ProjName}/vendor/LoRaMac-node-4.4.7/src/mac}"
-	"${workspace_loc:/${ProjName}/comm_lorawan/common/LmHandler/packages}"
-	"${workspace_loc:/${ProjName}/comm_lorawan/common/LmHandler}"
-	"${workspace_loc:/${ProjName}/comm_lorawan}"
-	"${workspace_loc:/${ProjName}/comm_lorawan/common}"
-	"${workspace_loc:/${ProjName}/port_loramac_node_board}"
+"${workspace_loc:/${ProjName}/vendor/LoRaMac-node-4.4.7/src/boards}"
+"${workspace_loc:/${ProjName}/vendor/LoRaMac-node-4.4.7/src/system}"
+"${workspace_loc:/${ProjName}/vendor/LoRaMac-node-4.4.7/src/mac/region}"
+"${workspace_loc:/${ProjName}/vendor/LoRaMac-node-4.4.7/src/radio}"
+"${workspace_loc:/${ProjName}/vendor/LoRaMac-node-4.4.7/src/peripherals/soft-se}"
+"${workspace_loc:/${ProjName}/vendor/LoRaMac-node-4.4.7/src/mac}"
+"${workspace_loc:/${ProjName}/comm_lorawan/common/LmHandler/packages}"
+"${workspace_loc:/${ProjName}/comm_lorawan/common/LmHandler}"
+"${workspace_loc:/${ProjName}/comm_lorawan}"
+"${workspace_loc:/${ProjName}/comm_lorawan/common}"
+"${workspace_loc:/${ProjName}/port_loramac_node_board}"
 ```
 
 5.	Add the following list of defines into the Preprocessor list for C Compiler:
 ```
-	"ACTIVE_REGION=LORAMAC_REGION_AU915"
-	REGION_AU915=1
-	SOFT_SE=1
-	SX1262MBXCAS=1
+"ACTIVE_REGION=LORAMAC_REGION_AU915"
+REGION_AU915=1
+SOFT_SE=1
+SX1262MBXCAS=1
 ```
-	**This one shall only be added if the Bluetooth ID is present in the MCU (such as in BG22 or MG22 series)**
+	-	**This one shall only be added if the Bluetooth ID is present in the MCU (such as in BG22 or MG22 series)**
 ```
-	BLUETOOTH_ID_PRESENT=1
+BLUETOOTH_ID_PRESENT=1
 ```
 
 6.	Exclude from Build the unused files for the radio board support, by selecting the radio folder or only the `.c file`.
