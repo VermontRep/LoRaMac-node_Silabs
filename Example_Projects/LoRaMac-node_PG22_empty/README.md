@@ -6,10 +6,10 @@
 Project File ready to use: `LoRaMac-node_PG22_empty.sls`
 
 Summary:
-	-	Silabs MCU Board: **PG22-DK2503A**
-	-	Semtech mbed shield: **SX1262MB2xAS**
-	-	Base Project: **Empty C Project**
-	-	Added Functions: *LoRaWAN + print functions*
+-	Silabs MCU Board: **PG22-DK2503A**
+-	Semtech mbed shield: **SX1262MB2xAS**
+-	Base Project: **Empty C Project**
+-	Added Functions: *LoRaWAN + print functions*
 
 ## Files to Replace in the Basic Project when creating it
 
