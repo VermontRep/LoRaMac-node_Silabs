@@ -6,10 +6,10 @@
 Project File ready to use: `LoRaMac-node_BG22_soc_thermometer.sls`
 
 Summary:
-	-	Silabs MCU Board: **BG22-BRD4184A**
-	-	Semtech mbed shield: **SX1262MB2xAS**
-	-	Base Project: **Bluetooth - SoC Thermometer**
-	-	Added Functions: *LoRaWAN + print functions*
+-	Silabs MCU Board: **BG22-BRD4184A**
+-	Semtech mbed shield: **SX1262MB2xAS**
+-	Base Project: **Bluetooth - SoC Thermometer**
+-	Added Functions: *LoRaWAN + print functions*
 
 ## Files to Replace in the Basic Project when creating it
 
