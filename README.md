@@ -62,7 +62,7 @@ SX1262MBXCAS=1
 BLUETOOTH_ID_PRESENT=1
 ```
 
-	-	**This last one BLUETOOTH_ID_PRESENT=1 one shall only be added if the Bluetooth ID is present in the MCU (such as in BG22 or MG22 series)**
+-	**This last one BLUETOOTH_ID_PRESENT=1 one shall only be added if the Bluetooth ID is present in the MCU (such as in BG22 or MG22 series)**
 
 6.	Exclude from Build the unused files for the radio board support, by selecting the radio folder or only the `.c file`.
 	Example: if using the **SX1262**, exclude from Build, the SX1272 and SX1276 support files / folders.
