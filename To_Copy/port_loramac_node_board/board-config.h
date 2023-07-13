@@ -19,25 +19,25 @@ extern "C"
  * Board MCU pins definitions - BRD4184A - BG22 1st block OK
  */
 //#define RADIO_RESET                                 PC_7	//BRD4184A 
-#define RADIO_RESET                                 PB_1	//BRD4182A + BRD2503A 
+#define RADIO_RESET                                 PB_1	//BRD4182A + BRD2503A + BRD4184B
 
-#define RADIO_MOSI                                  PC_0	//BR4182A + BRD4184A + BRD2503A
-#define RADIO_MISO                                  PC_1	//BR4182A + BRD4184A + BRD2503A
-#define RADIO_SCLK                                  PC_2	//BR4182A + BRD4184A + BRD2503A
+#define RADIO_MOSI                                  PC_0	//BR4182A + BRD4184A + BRD2503A + BRD4184B
+#define RADIO_MISO                                  PC_1	//BR4182A + BRD4184A + BRD2503A + BRD4184B
+#define RADIO_SCLK                                  PC_2	//BR4182A + BRD4184A + BRD2503A + BRD4184B
 
 #if defined( SX1261MBXBAS ) || defined( SX1262MBXCAS ) || defined( SX1262MBXDAS )
 
-#define RADIO_NSS                                   PB_2	//BRD4184A + BRD2503A
+#define RADIO_NSS                                   PB_2	//BRD4184A + BRD2503A + BRD4184B
 //#define RADIO_NSS                                   PC_3	//BRD4182A
 //#define RADIO_BUSY                                  PC_6	//BRD4184A
-#define RADIO_BUSY                                  PB_0	//BRD4182A + BRD2503A
+#define RADIO_BUSY                                  PB_0	//BRD4182A + BRD2503A + BRD4184B
 //#define RADIO_DIO_1                                 PB_1	//BRD4184A
 //#define RADIO_DIO_1                                 PD_3	//BRD4182A
-#define RADIO_DIO_1                                 PB_3	//BRD2503A
+#define RADIO_DIO_1                                 PB_3	//BRD2503A + BRD4184B
 
 //#define RADIO_ANT_SWITCH_POWER                      PB_0	//BRD4184A
 //#define RADIO_ANT_SWITCH_POWER                      PD_2	//BRD4182A
-#define RADIO_ANT_SWITCH_POWER                      PA_4	//BRD2503A
+#define RADIO_ANT_SWITCH_POWER                      PA_4	//BRD2503A + BRD4184B
 
 #elif defined( LR1110MB1XXS )
 
