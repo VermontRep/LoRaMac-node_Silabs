@@ -14,6 +14,11 @@ Here a list of examples that can be downloaded to be imported and generated read
 	-	Semtech mbed shield: **SX1262MB2xAS**
 	-	Base Project: **Bluetooth - SoC Thermometer**
 	-	Added Functions: *LoRaWAN + print functions*
+-	[LoRaMac-node_BG22new_soc_thermometer](https://github.com/VermontRep/LoRaMac-node_Silabs/tree/master/Example_Projects/LoRaMac-node_BG22new_soc_thermometer)
+	-	Silabs MCU Board: **BG22-BRD4184B - new Thunderboard**
+	-	Semtech mbed shield: **SX1262MB2xAS**
+	-	Base Project: **Bluetooth - SoC Thermometer**
+	-	Added Functions: *LoRaWAN + print functions*
 -	[LoRaMac-node_MG22_soc_thermometer](https://github.com/VermontRep/LoRaMac-node_Silabs/tree/master/Example_Projects/LoRaMac-node_MG22_soc_thermometer)
 	-	Silabs MCU Board: **BG22-BRD4182A** together with the **BRD4001A** base board
 	-	Semtech mbed shield: **SX1262MB2xAS**
