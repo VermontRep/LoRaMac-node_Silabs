@@ -16,30 +16,90 @@ extern "C"
 #endif
 
 /*!
- * Board MCU pins definitions - BRD4184A - BG22 1st block OK
+ * Board MCU pins definitions
  */
-//#define RADIO_RESET                                 PC_7	//BRD4184A 
-#define RADIO_RESET                                 PB_1	//BRD4182A + BRD2503A + BRD4184B
-
-#define RADIO_MOSI                                  PC_0	//BR4182A + BRD4184A + BRD2503A + BRD4184B
-#define RADIO_MISO                                  PC_1	//BR4182A + BRD4184A + BRD2503A + BRD4184B
-#define RADIO_SCLK                                  PC_2	//BR4182A + BRD4184A + BRD2503A + BRD4184B
+#define SILABS_BRD4184B				// Define here which Silabs Board is used, otherwise, create custom set
 
 #if defined( SX1261MBXBAS ) || defined( SX1262MBXCAS ) || defined( SX1262MBXDAS )
 
-#define RADIO_NSS                                   PB_2	//BRD4184A + BRD2503A + BRD4184B
-//#define RADIO_NSS                                   PC_3	//BRD4182A
-//#define RADIO_BUSY                                  PC_6	//BRD4184A
-#define RADIO_BUSY                                  PB_0	//BRD4182A + BRD2503A + BRD4184B
-//#define RADIO_DIO_1                                 PB_1	//BRD4184A
-//#define RADIO_DIO_1                                 PD_3	//BRD4182A
-#define RADIO_DIO_1                                 PB_3	//BRD2503A + BRD4184B
-
-//#define RADIO_ANT_SWITCH_POWER                      PB_0	//BRD4184A
-//#define RADIO_ANT_SWITCH_POWER                      PD_2	//BRD4182A
-#define RADIO_ANT_SWITCH_POWER                      PA_4	//BRD2503A + BRD4184B
+#ifdef SILABS_BRD2503A  //BRD2503A(Thunderboard PG22)
+	#define RADIO_RESET                                 PB_1
+	#define RADIO_MOSI                                  PC_0
+	#define RADIO_MISO                                  PC_1
+	#define RADIO_SCLK                                  PC_2
+	#define RADIO_NSS                                   PB_2
+	#define RADIO_BUSY                                  PB_0
+	#define RADIO_DIO_1                                 PB_3
+	#define RADIO_ANT_SWITCH_POWER                      PA_4
+#endif	//SILABS_BRD2503A
+#ifdef SILABS_BRD2601B  //BRD2601B(Thunderboard MG24)
+	#define RADIO_RESET                                 PB_0
+	#define RADIO_MOSI                                  PC_3
+	#define RADIO_MISO                                  PC_2
+	#define RADIO_SCLK                                  PC_1
+	#define RADIO_NSS                                   PA_7
+	#define RADIO_BUSY                                  PB_2
+	#define RADIO_DIO_1                                 PD_2
+	#define RADIO_ANT_SWITCH_POWER                      PB_3
+#endif	//SILABS_BRD2601B
+#ifdef SILABS_BRD4104A  //BRD4104A(Radio board BG13 + Base Board)
+	#define RADIO_RESET                                 PD_11
+	#define RADIO_MOSI                                  PC_6
+	#define RADIO_MISO                                  PC_7
+	#define RADIO_SCLK                                  PC_8
+	#define RADIO_NSS                                   PC_9
+	#define RADIO_BUSY                                  PD_10
+	#define RADIO_DIO_1                                 PF_3
+	#define RADIO_ANT_SWITCH_POWER                      PD_12
+#endif	//SILABS_BRD4104A
+#ifdef SILABS_BRD4108A  //BRD4108A(Explorer Kit BG22)
+	#define RADIO_RESET                                 PD_2
+	#define RADIO_MOSI                                  PC_0
+	#define RADIO_MISO                                  PC_1
+	#define RADIO_SCLK                                  PC_2
+	#define RADIO_NSS                                   PC_3
+	#define RADIO_BUSY                                  PD_3
+	#define RADIO_DIO_1                                 PB_2
+	#define RADIO_ANT_SWITCH_POWER                      PB_1
+#endif	//SILABS_BRD4108A
+#ifdef SILABS_BRD4182A  //BRD4182A(Base board + Radio Board MG22)
+	#define RADIO_RESET                                 PB_1
+	#define RADIO_MOSI                                  PC_0
+	#define RADIO_MISO                                  PC_1
+	#define RADIO_SCLK                                  PC_2
+	#define RADIO_NSS                                   PC_3
+	#define RADIO_BUSY                                  PB_0
+	#define RADIO_DIO_1                                 PD_3
+	#define RADIO_ANT_SWITCH_POWER                      PD_2
+#endif	//SILABS_BRD4182A
+#ifdef SILABS_BRD4183A  //BRD4183A(Base board + Radio Board MG22 QFN32)
+	//ATTENTION!!! The BRD4183A board (QFN32) does not have enough IO pins to run this code...
+	#error "The BRD4183A board (QFN32) does not have enough IO pins to support LoRa shields"
+#endif	//SILABS_BRD4183A
+#ifdef SILABS_BRD4184A  //BRD4184A(Thunderboard BG22)
+	#define RADIO_RESET                                 PC_7
+	#define RADIO_MOSI                                  PC_0
+	#define RADIO_MISO                                  PC_1
+	#define RADIO_SCLK                                  PC_2
+	#define RADIO_NSS                                   PB_2
+	#define RADIO_BUSY                                  PC_6
+	#define RADIO_DIO_1                                 PB_1
+	#define RADIO_ANT_SWITCH_POWER                      PB_0
+#endif	//SILABS_BRD4184A
+#ifdef SILABS_BRD4184B  //BRD4184B(New Thunderboard BG22)
+	#define RADIO_RESET                                 PB_1
+	#define RADIO_MOSI                                  PC_0
+	#define RADIO_MISO                                  PC_1
+	#define RADIO_SCLK                                  PC_2
+	#define RADIO_NSS                                   PB_2
+	#define RADIO_BUSY                                  PB_0
+	#define RADIO_DIO_1                                 PB_3
+	#define RADIO_ANT_SWITCH_POWER                      PA_4
+#endif	//SILABS_BRD4184B
 
 #elif defined( LR1110MB1XXS )
+
+// WARNING!!! Need to create definitions for LR1110 board
 
 #define RADIO_NSS                                   PA_8
 #define RADIO_BUSY                                  PB_3
@@ -53,6 +113,8 @@ extern "C"
 #define RADIO_DBG_PIN_RX                            PC_7
 
 #elif defined( SX1272MB2DAS) || defined( SX1276MB1LAS ) || defined( SX1276MB1MAS )
+
+// WARNING!!! Need to create definitions for SX1272 board
 
 #define RADIO_NSS                                   PB_6
 
@@ -73,6 +135,13 @@ extern "C"
 #define RADIO_DBG_PIN_RX                            PA_4
 
 #endif
+
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif // __BOARD_CONFIG_H__
 
 
 #ifdef __cplusplus
